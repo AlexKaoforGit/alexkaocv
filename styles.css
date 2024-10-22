@@ -49,13 +49,6 @@ header {
     position: relative;
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* 改為左對齊 */
-    padding-left: 2rem; /* 添加 padding-left 以確保內容不會緊貼左邊 */
-}
-
 header .profile-pic {
     width: 150px;
     height: 150px;
@@ -82,6 +75,10 @@ section {
 h3 {
     border-bottom: 2px solid #333;
     padding-bottom: 0.5rem;
+}
+
+h4 {
+    text-decoration: underline;
 }
 
 .bio {
@@ -176,22 +173,6 @@ label, input, button {
 
 .timeline-item:nth-child(even) .timeline-content {
     left: calc(50% + 20px); /* 調整位置，偶數項目再靠右一點點 */
-}
-
-/* 調整時間軸在小螢幕上的顯示 */
-@media (max-width: 768px) {
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-item::before {
-        left: 20px;
-    }
-
-    .timeline-content {
-        width: calc(100% - 40px);
-        left: 40px !important;
-    }
 }
 
 /* 個人專案樣式 */
@@ -342,4 +323,179 @@ ol > li::before {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+.artistic-header {
+    background: linear-gradient(135deg, #001f3f 0%, #005f7f 100%); /* 海軍藍漸層風格 */
+    color: white;
+    text-align: center;
+    border-bottom: 5px solid #333;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-title {
+    font-size: 3em;
+    margin: 0;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.header-subtitle {
+    font-size: 1.8em;
+    margin: 10px 0 0;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.paintings-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.paintings-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.paintings-name {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.completion-date {
+    font-size: 0.8em;
+    color: #888;
+    padding: 2px 6px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+}
+
+.paintings-description {
+    text-align: start;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #666;
+}
+
+.paintings-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* 水平置中 */
+}
+
+.painting-item {
+    display: flex;
+    align-items: stretch; /* 讓圖片和文字高度一致 */
+    gap: 20px;
+    justify-content: center; /* 水平置中 */
+    position: relative; /* 為了讓絕對定位的元素相對於這個容器定位 */
+}
+
+.painting-item:nth-of-type(odd) {
+    flex-direction: row;
+}
+
+.painting-item:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.painting-item img {
+    width: 300px; /* 固定圖片寬度 */
+    height: 100%; /* 讓圖片高度與文字一致 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    object-fit: cover; /* 確保圖片不會變形 */
+}
+
+.painting-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.painting-text {
+    width: 20%;
+    font-size: 1.1em;
+    color: #333;
+    position: relative; /* 為了讓絕對定位的元素相對於這個容器定位 */
+}
+
+.separator {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #666;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item::before {
+        left: 20px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 40px);
+        left: 40px !important;
+    }
+    
+    .painting-item {
+        flex-direction: column !important; /* 圖在上，文字在下 */
+        align-items: center; /* 水平置中 */
+    }
+
+    .painting-item img,
+    .painting-text {
+        width: 100%; /* 圖片和文字寬度調整為100% */
+        height: auto; /* 確保圖片高度自適應 */
+    }
+
+    .painting-text {
+        text-align: start; /* 文字靠左 */
+    }
+
+    .paintings-name {
+        text-align: center; /* 文字置中 */
+    }
 }
