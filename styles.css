@@ -1,0 +1,345 @@
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    line-height: 2; /* 調整行距 */
+}
+
+nav {
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+header {
+    background-color: #666;
+    color: white;
+    padding: 5rem 0;
+    text-align: left; /* 改為左對齊 */
+    margin-top: 3rem;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 改為左對齊 */
+    padding-left: 2rem; /* 添加 padding-left 以確保內容不會緊貼左邊 */
+}
+
+header .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-right: 2rem;
+}
+
+.header-text {
+    text-align: left;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* 調整寬度 */
+    max-width: 800px; /* 設置最大寬度 */
+}
+
+h3 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+.bio {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.indent {
+    padding-left: 2rem; /* 添加縮排 */
+}
+
+label, input, button {
+    margin: 0.5rem 0;
+}
+
+/* 調整技能專長列表的行距 */
+#skills ul {
+    line-height: 1.8; /* 調整行距 */
+}
+
+#skills ul li {
+    margin-bottom: 0.5rem; /* 調整每個列表項的間距 */
+}
+
+/* 工作經歷卡片樣式 */
+.job-card {
+    background-color: #f0f0f0; /* 改為更淺的灰色 */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h3 {
+    margin-top: 0;
+}
+
+.job-card ul {
+    padding-left: 1.5rem;
+}
+
+/* 專案經驗時間軸樣式 */
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ccc;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 2rem 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #666;
+    margin-left: -10px;
+    top: 0;
+}
+
+.timeline-content {
+    padding: 1rem 2rem;
+    background: #f0f0f0;
+    border-radius: 8px;
+    position: relative;
+    width: 50%; /* 調整寬度 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* 確保 padding 不會影響寬度 */
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    left: calc(50% - 50% - 20px); /* 調整位置，基數項目再靠左一點點 */
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    left: calc(50% + 20px); /* 調整位置，偶數項目再靠右一點點 */
+}
+
+/* 調整時間軸在小螢幕上的顯示 */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item::before {
+        left: 20px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 40px);
+        left: 40px !important;
+    }
+}
+
+/* 個人專案樣式 */
+.project-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-details {
+    text-align: left;
+    width: 100%;
+}
+
+.project-highlight {
+    margin-bottom: 25px; /* 調整這個值來改變行距 */
+    margin-top: 25px; /* 調整這個值來改變行距 */
+}
+
+/* 針對 .project-details h4 進行樣式調整 */
+.project-details h4:first-of-type {
+    text-align: center;
+    font-size: 1.5rem; /* 調整字體大小，使其與 h3 相同 */
+    margin-top: 20px;
+}
+
+.video-container {
+    margin-top: 1rem;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* 調整內嵌列表的縮排 */
+ol li ul {
+    padding-left: 1rem; /* 調整內嵌列表的縮排 */
+    list-style-type: disc; /* 使用圓點作為列表符號 */
+}
+
+/* 使有序列表的數字變成粗體 */
+ol {
+    counter-reset: item;
+    list-style: none;
+    padding-left: 0;
+}
+
+ol > li {
+    counter-increment: item;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+ol > li::before {
+    content: counter(item) ".";
+    font-weight: bold; /* 使數字變成粗體 */
+    position: absolute;
+    left: 0;
+}
+
+.carousel-inner img {
+    height: 300px; /* 調整這個值來改變高度 */
+    object-fit: contain; /* 確保圖片適應新的高度 */
+}
+
+.carousel {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #a9a9a9; /* 設置 carousel 的背景顏色為灰色 */
+}
+
+/* Modal container */
+.modal {
+    display: none; /* 隱藏 modal */
+    position: fixed; /* 固定位置 */
+    z-index: 1050; /* 保持在頂層，設置更高的 z-index */
+    left: 0;
+    top: 0;
+    width: 100%; /* 全寬 */
+    height: 100%; /* 全高 */
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明黑色背景 */
+    display: flex; /* 使用 flexbox 置中 */
+    align-items: center; /* 垂直置中 */
+    justify-content: center; /* 水平置中 */
+    padding: 30px; /* 防止內容貼邊 */
+}
+
+/* Wrapper for image and caption */
+.modal-content-wrapper {
+    text-align: center; /* 使文字在圖片下方居中 */
+    max-width: 90%; /* 調整最大寬度 */
+}
+
+/* Modal content (image) */
+.modal-content {
+    display: block;
+    max-width: 100%; /* 圖片寬度自適應容器 */
+    max-height: 80vh; /* 調整最大高度，避免超出螢幕高度 */
+    margin: 0 auto; /* 水平置中 */
+    border-radius: 8px; /* 圖片邊角圓滑 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* 添加陰影 */
+}
+
+/* Caption text */
+#caption {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 1rem;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
