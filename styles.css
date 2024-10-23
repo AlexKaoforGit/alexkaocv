@@ -7,16 +7,15 @@ body {
     background-color: #f4f4f4;
     line-height: 2; /* 調整行距 */
     overflow-x: hidden; /* 隱藏水平滾動條 */
-    width: 100vw; /* 確保佔滿整個視窗寬度 */
 }
 
 nav {
     background-color: #333;
     position: fixed;
-    width: 100vw; /* 確保佔滿整個視窗寬度 */
     top: 0;
     left: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .nav-container {
@@ -78,7 +77,6 @@ header {
     text-align: left; /* 改為左對齊 */
     margin-top: 3rem;
     position: relative;
-    width: 100vw; /* 確保佔滿整個視窗寬度 */
 }
 
 .header-content {
@@ -485,7 +483,6 @@ footer {
     background-color: #333;
     color: #fff;
     margin-top: 40px;
-    width: 100vw; /* 確保佔滿整個視窗寬度 */
 }
 
 .footer-text {
@@ -517,11 +514,12 @@ footer a:hover {
     nav ul {
         display: none;
         flex-direction: column;
-        width: 100%;
-        position: absolute;
+        width: 200px; /* 設置菜單寬度 */
+        position: fixed;
         top: 60px; /* 確保菜單顯示在漢堡圖標和品牌下方 */
-        left: 0;
+        right: 0;
         background-color: #333;
+        padding-top: 10px; /* 添加內邊距以確保選項不緊貼頂部 */
     }
 
     nav ul.active {
@@ -530,6 +528,7 @@ footer a:hover {
 
     .hamburger {
         display: flex;
+        z-index: 1001;
     }
 
     .indent {
@@ -570,17 +569,13 @@ footer a:hover {
         font-size: 0.8em; /* 縮小字體 */
     }
 
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-item::before {
-        left: 20px;
+    .timeline-item {
+        text-align: left; /* 靠左對齊 */
     }
 
     .timeline-content {
-        width: calc(100% - 40px);
-        left: 40px 
+        width: 100%; /* 調整寬度為100% */
+        left: 0 !important; /* 靠左對齊 */
     }
     
     .painting-item {
