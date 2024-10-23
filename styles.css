@@ -7,6 +7,7 @@ body {
     background-color: #f4f4f4;
     line-height: 2; /* 調整行距 */
     overflow-x: hidden; /* 隱藏水平滾動條 */
+    width: 100vw; /* 確保佔滿整個視窗寬度 */
 }
 
 nav {
@@ -484,6 +485,7 @@ footer {
     background-color: #333;
     color: #fff;
     margin-top: 40px;
+    width: 100vw; /* 確保佔滿整個視窗寬度 */
 }
 
 .footer-text {
