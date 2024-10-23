@@ -17,12 +17,41 @@ nav {
     z-index: 1000;
 }
 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.brand {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    font-family: "Dancing Script", cursive;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center; /* 確保在同一排 */
 }
 
 nav ul li {
@@ -47,6 +76,13 @@ header {
     text-align: left; /* 改為左對齊 */
     margin-top: 3rem;
     position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 改為左對齊 */
+    padding-left: 2rem; /* 添加 padding-left 以確保內容不會緊貼左邊 */
 }
 
 header .profile-pic {
@@ -332,23 +368,24 @@ ol > li::before {
     border-bottom: 5px solid #333;
     margin: 0;
     margin-bottom: 30px;
+    padding: 2rem 0; /* 調整內邊距以縮短高度 */
 }
 
-.header-content {
+.artistic-header-content {
     max-width: 800px;
     margin: 0 auto;
 }
 
 .header-title {
-    font-size: 3em;
+    font-size: 2em;
     margin: 0;
-    font-family: 'Brush Script MT', cursive;
+    font-family: "Dancing Script", cursive;
 }
 
 .header-subtitle {
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin: 10px 0 0;
-    font-family: 'Brush Script MT', cursive;
+    font-family: "Dancing Script", cursive;
 }
 
 .paintings-container {
@@ -382,7 +419,7 @@ ol > li::before {
 
 .paintings-description {
     text-align: start;
-    font-size: 1.1em;
+    font-size: 1em;
     margin-bottom: 10px;
     margin-top: 10px;
     color: #666;
@@ -398,7 +435,7 @@ ol > li::before {
 .painting-item {
     display: flex;
     align-items: stretch; /* 讓圖片和文字高度一致 */
-    gap: 20px;
+    gap: 50px;
     justify-content: center; /* 水平置中 */
     position: relative; /* 為了讓絕對定位的元素相對於這個容器定位 */
 }
@@ -467,6 +504,68 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* 確保菜單顯示在漢堡圖標和品牌下方 */
+        left: 0;
+        background-color: #333;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .indent {
+        padding-left: 0; /* 移除縮排 */
+    }
+    
+    h1 {
+        font-size: calc(1.75em + 1vw) !important; /* 自動縮小字體 */
+    }
+    
+    h2 {
+        font-size: calc(1.5em + 1vw) !important; /* 自動縮小字體 */
+    }
+    
+    h3 {
+        font-size: calc(1.25em + 1vw) !important; /* 自動縮小字體 */
+    }
+    
+    h4 {
+        font-size: calc(1em + 1vw) !important; /* 自動縮小字體 */
+    }
+    
+    h5 {
+        font-size: calc(0.875em + 1vw) !important; /* 自動縮小字體 */
+    }
+    
+    h6 {
+        font-size: calc(0.75em + 1vw) !important; /* 自動縮小字體 */
+    }
+
+    /* 取消 ul 和 ol 內列點的縮排 */
+    ul, ol {
+        padding-left: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .header-text {
+        font-size: 0.8em; /* 縮小字體 */
+    }
+
     .timeline::before {
         left: 20px;
     }
@@ -477,7 +576,7 @@ footer a:hover {
 
     .timeline-content {
         width: calc(100% - 40px);
-        left: 40px !important;
+        left: 40px 
     }
     
     .painting-item {
