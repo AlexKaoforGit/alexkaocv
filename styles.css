@@ -8,6 +8,27 @@ body {
     line-height: 2; /* 調整行距 */
     overflow-x: hidden; /* 隱藏水平滾動條 */
 }
+        /* 設置全局 HTML 和 body */
+        html {
+            height: 100vh;
+        }
+
+        body {
+            height: 5000px; /* 設置足夠的高度來滾動 */
+            background: #000;
+            margin: 0;
+        }
+
+        /* 設置 Canvas */
+        canvas {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100vw;
+            max-height: 100vh;
+            z-index: -1; /* 設置畫布在最底層 */
+        }
 
 nav {
     background-color: #333;
@@ -520,6 +541,184 @@ footer a:hover {
 
 .contact-list a:hover {
     text-decoration: underline;
+}
+
+/* 基本樣式 */
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px dashed #ddd;
+}
+
+.circle h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    color: #0073e6;
+    z-index: 1;
+}
+
+/* .icons 整體旋轉動畫 */
+.icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* animation: rotate 10s linear infinite; */
+    transform-origin: 50% 50%; /* 設定旋轉基準點在圓心 */
+}
+
+/* 圖標樣式，使用 translate 確保每個圖標距離圓心的距離 */
+.icons img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+}
+
+/* 等距排列每個圖標，並用 translateY(-90px) 來微調 */
+.icons img:nth-child(1) { transform: rotate(0deg) translateY(-100px); }
+.icons img:nth-child(2) { transform: rotate(72deg) translateY(-100px); }
+.icons img:nth-child(3) { transform: rotate(144deg) translateY(-100px); }
+.icons img:nth-child(4) { transform: rotate(216deg) translateY(-100px); }
+.icons img:nth-child(5) { transform: rotate(288deg) translateY(-100px); }
+
+/* 定義旋轉動畫 */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.page {
+  margin: 20px auto;
+  display: flex;
+  max-width: 1140px;
+  background-color: #fff;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: #f3f4f5;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.photo-container {
+  position: relative;
+  top: 30px;
+  left: -120px;
+}
+
+.photo-cont-item {
+  display: flex;
+  width: calc(380px * 6);
+  .photo-item {
+    width: 320px;
+    height: 200px;
+    margin-right: 60px;
+    margin-bottom: 60px;
+    border-radius: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.animation-1 {
+  animation: scroller 40s linear infinite;
+  display: flex;
+  width: calc(380px * 12);
+}
+.animation-2 {
+  margin-left: 150px;
+  animation: scroller 30s linear infinite;
+  display: flex;
+  width: calc(380px * 12);
+}
+.animation-3 {
+  animation: scroller 50s linear infinite;
+  display: flex;
+  width: calc(380px * 12);
+}
+
+@keyframes scroller {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX( calc(-380px * 6) );
+  }
+}
+
+.photo-1 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513400/Nature/image_18_lwam5y.jpg);
+}
+.photo-2 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513347/Nature/image_16_oqcpeb.jpg);
+}
+.photo-3 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513347/Nature/image_15_opmlwd.jpg);
+}
+.photo-4 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513346/Nature/image_14_nie14a.jpg);
+}
+.photo-5 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513346/Nature/image_13_kojf0w.jpg);
+}
+.photo-6 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513346/Nature/image_17_hngpby.jpg);
+}
+.photo-7 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513346/Nature/image_11_wcunjf.jpg);
+}
+.photo-8 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513346/Nature/image_9_stnpjs.jpg);
+}
+.photo-9 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_12_m3evi3.jpg);
+}
+.photo-10 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_10_euaoai.jpg);
+}
+.photo-11 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_7_apdkz1.jpg);
+}
+.photo-12 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_8_khwrpi.jpg);
+}
+.photo-13 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_5_vhwqqg.jpg);
+}
+.photo-14 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_2_nrbfpf.jpg);
+}
+.photo-15 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_4_qxw6i4.jpg);
+}
+.photo-16 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_3_ucohbw.jpg);
+}
+.photo-17 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_1_yitfy3.jpg);
+}
+.photo-18 {
+  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_6_xcylqe.jpg);
 }
 
 /* Responsive Design */
