@@ -724,6 +724,10 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden; /* 阻止移動端的橫向滾動 */
+    }
+
     .nav-container {
         flex-direction: row;
         justify-content: space-between;
