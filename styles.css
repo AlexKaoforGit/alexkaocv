@@ -658,12 +658,6 @@ footer a:hover {
   width: calc(380px * 12);
 }
 
-.animation-1,
-.animation-2 {
-    width: 100vw; /* 限制寬度 */
-    overflow-x: hidden;
-}
-
 @keyframes scroller {
   0% {
     transform: translateX(0);
