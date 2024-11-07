@@ -22,445 +22,456 @@
     </script>
 </head>
 <body>
-    <!-- Canvas 元素 -->
-    <canvas id="hero-lightpass"></canvas>
-    <nav>
-        <div class="nav-container">
-            <div class="brand">Alex Kao</div>
-            <div class="hamburger" onclick="toggleMenu()">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <ul>
-                <li><a href="#about" onclick="toggleMenu()">關於我</a></li>
-                <li><a href="#skills" onclick="toggleMenu()">技能專長</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">工作經歷</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">專案經驗</a></li>
-                <li><a href="#personalProjects" onclick="toggleMenu()">個人專案</a></li>
-                <li><a href="#interest" onclick="toggleMenu()">其他興趣</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">聯絡方式</a></li>
-            </ul>
-        </div>
-    </nav>
-    <header>
-        <div class="header-content">
-            <img src="images/myphoto/myphoto.png" alt="大頭貼" class="profile-pic">
-            <div class="header-text">
-                <h2>高得祐 Alex Kao</h2>
-                <p>前後端開發工程師</p>
-            </div>
-        </div>
-    </header>
-    <section id="about">
-        <h3>關於我</h3>
-        <div class="indent">
-            <div class="bio">
-                <h4>自傳</h4>
-                <div class="indent">
-                    <p>　　在和雲行動服務有限公司 - iRent 任職三年，擔任後端開發工程師。在這段期間，我熟悉了使用 .NET 和 C# 開發自動化排程系統及 API 的流程，並且能獨立完成系統架構設計及優化工作。我的主要技能包括：</p>
-                    <ul>
-                        <li><strong>後端技術：</strong>熟悉 .NET 和 C# 的開發，負責自動化排程系統與 API 開發。</li>
-                        <li><strong>資料庫操作：</strong>具備 MSSQL 的專業能力，特別擅長編寫 Stored Procedure，能有效提升數據處理效率與查詢速度。</li>
-                        <li><strong>Python 開發：</strong>能夠利用 Python 處理多樣化的後端需求。</li>
-                    </ul>
-                    <p>目前，我也積極參與 LINE Bot 專案的開發，專注於：</p>
-                    <ul>
-                        <li><strong>使用 Python FastAPI 開發 LINE Bot：</strong>設計並實現高效的聊天機器人功能，以提升用戶互動體驗。</li>
-                        <li><strong>前端技能：</strong>具備 HTML 和 JavaScript 的基礎開發能力，能處理前端需求，協助團隊進行全棧開發。</li>
-                    </ul>
-                    <p>我的工作不僅讓我在技術上持續進步，更培養了我以下能力：</p>
-                    <ul>
-                        <li><strong>解決問題能力：</strong>針對複雜的技術問題提供有效的解決方案。</li>
-                        <li><strong>專案管理經驗：</strong>能夠在專案中進行有效的協作與進度控制。</li>
-                        <li><strong>系統設計與優化能力：</strong>能夠根據需求設計系統架構，並持續優化流程，確保系統的穩定性與擴展性。</li>
-                        <li><strong>數據分析與效率提升：</strong>熟練 MSSQL 的資料庫操作，特別是在撰寫高效的 Stored Procedure 方面，能顯著提升數據處理與查詢的速度。</li>
-                        <li><strong>跨部門協作：</strong>能在不同專案中與其他團隊有效溝通協作，理解並滿足跨部門需求。</li>
-                        <li><strong>專案規劃與時間管理：</strong>能獨立負責專案的進度控制，設置目標並確保如期完成。</li>
-                        <li><strong>客戶導向思維：</strong>在解決技術問題時，始終將使用者需求放在首位，以提升系統的易用性和用戶體驗。</li>
-                    </ul>
-                    <p>在羽球報名 LINE Bot 的開發專案中，我找到了一個讓興趣與專業結合的契機。兩年前開始接觸羽球運動，隨著參加活動的次數增多，我逐漸發現了傳統報名流程中的許多痛點，像是重複登記、遺漏訊息等。這激發了我透過技術去解決實際需求的想法。
-                        在這個專案中，我將對羽球的熱愛與 LINE Bot 的技術結合，並深入鑽研 Python FastAPI、Firebase、LINE LIFF 等技術，專注於優化用戶體驗與提升報名流程的便利性。這項工作讓我體會到在興趣中探索技術的成就感，每當成功解決問題或優化功能，對我來說都是一種鼓舞，也讓我更堅定地朝著這條技術與興趣結合的道路前進。</p>
+    <div class="main-container">
+        <!-- Canvas 元素 -->
+        <canvas id="hero-lightpass"></canvas>
+        <nav>
+            <div class="nav-container">
+                <div class="brand">Alex Kao</div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
-            </div>
-            <div class="education">
-                <h4>學歷</h4>
                 <ul>
-                    <li>中原大學 - 資訊管理學系<br>(2014 - 2018)</li>
-                    <li>大直高中 - 二類組<br>(2010 - 2013)</li>
+                    <li><a href="#about" onclick="toggleMenu()">關於我</a></li>
+                    <li><a href="#skills" onclick="toggleMenu()">技能專長</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">工作經歷</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">專案經驗</a></li>
+                    <li><a href="#personalProjects" onclick="toggleMenu()">個人專案</a></li>
+                    <li><a href="#interest" onclick="toggleMenu()">其他興趣</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">聯絡方式</a></li>
                 </ul>
             </div>
-        </div>
-    </section>
-    <section id="skills">
-        <h3>技能專長</h3>
-        <ul>
-            <li><strong>後端技術：</strong>C#、.NET、Python、MSSQL、Firestore</li>
-            <li><strong>前端技術：</strong>HTML、JavaScript、CSS</li>
-            <li><strong>工具與其他技能：</strong>Git、Docker、Postman</li>
-        </ul>
-        <div class="circle-container">
-            <!-- 技能類別，例如後端技術 -->
-            <div class="circle">
-                <h4>後端技術</h4>
+        </nav>
+        <header>
+            <div class="header-content">
+                <img src="images/myphoto/myphoto.png" alt="大頭貼" class="profile-pic" data-aos="fade-down-right">
+                <div class="header-text" data-aos="fade-down-left">
+                    <h2>高得祐 Alex Kao</h2>
+                    <p>前後端開發工程師</p>
+                </div>
+            </div>
+        </header>
+        <section id="about">
+            <h3>關於我</h3>
+            <div class="indent">
+                <div class="bio">
+                    <h4>自傳</h4>
+                    <div class="indent" data-aos="zoom-in-up">
+                        <p>　　在和雲行動服務有限公司 - iRent 任職三年，擔任後端開發工程師。在這段期間，我熟悉了使用 .NET 和 C# 開發自動化排程系統及 API 的流程，並且能獨立完成系統架構設計及優化工作。我的主要技能包括：</p>
+                        <ul>
+                            <li><strong>後端技術：</strong>熟悉 .NET 和 C# 的開發，負責自動化排程系統與 API 開發。</li>
+                            <li><strong>資料庫操作：</strong>具備 MSSQL 的專業能力，特別擅長編寫 Stored Procedure，能有效提升數據處理效率與查詢速度。</li>
+                            <li><strong>Python 開發：</strong>能夠利用 Python 處理多樣化的後端需求。</li>
+                        </ul>
+                        <p>目前，我也積極參與 LINE Bot 專案的開發，專注於：</p>
+                        <ul>
+                            <li><strong>使用 Python FastAPI 開發 LINE Bot：</strong>設計並實現高效的聊天機器人功能，以提升用戶互動體驗。</li>
+                            <li><strong>前端技能：</strong>具備 HTML 和 JavaScript 的基礎開發能力，能處理前端需求，協助團隊進行全棧開發。</li>
+                        </ul>
+                        <p>我的工作不僅讓我在技術上持續進步，更培養了我以下能力：</p>
+                        <ul>
+                            <li><strong>解決問題能力：</strong>針對複雜的技術問題提供有效的解決方案。</li>
+                            <li><strong>專案管理經驗：</strong>能夠在專案中進行有效的協作與進度控制。</li>
+                            <li><strong>系統設計與優化能力：</strong>能夠根據需求設計系統架構，並持續優化流程，確保系統的穩定性與擴展性。</li>
+                            <li><strong>數據分析與效率提升：</strong>熟練 MSSQL 的資料庫操作，特別是在撰寫高效的 Stored Procedure 方面，能顯著提升數據處理與查詢的速度。</li>
+                            <li><strong>跨部門協作：</strong>能在不同專案中與其他團隊有效溝通協作，理解並滿足跨部門需求。</li>
+                            <li><strong>專案規劃與時間管理：</strong>能獨立負責專案的進度控制，設置目標並確保如期完成。</li>
+                            <li><strong>客戶導向思維：</strong>在解決技術問題時，始終將使用者需求放在首位，以提升系統的易用性和用戶體驗。</li>
+                        </ul>
+                        <p>在羽球報名 LINE Bot 的開發專案中，我找到了一個讓興趣與專業結合的契機。兩年前開始接觸羽球運動，隨著參加活動的次數增多，我逐漸發現了傳統報名流程中的許多痛點，像是重複登記、遺漏訊息等。這激發了我透過技術去解決實際需求的想法。
+                            在這個專案中，我將對羽球的熱愛與 LINE Bot 的技術結合，並深入鑽研 Python FastAPI、Firebase、LINE LIFF 等技術，專注於優化用戶體驗與提升報名流程的便利性。這項工作讓我體會到在興趣中探索技術的成就感，每當成功解決問題或優化功能，對我來說都是一種鼓舞，也讓我更堅定地朝著這條技術與興趣結合的道路前進。</p>
+                    </div>
+                </div>
+                <div class="education">
+                    <h4>學歷</h4>
+                    <ul data-aos="zoom-in-up">
+                        <li>中原大學 - 資訊管理學系<br>(2014 - 2018)</li>
+                        <li>大直高中 - 二類組<br>(2010 - 2013)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h3>技能專長</h3>
+            <ul>
+                <li data-aos="flip-left"><strong>後端技術：</strong>C#、.NET、Python、MSSQL、Firestore</li>
                 <div class="icons">
-                    <img src="images/c-sharp.png" alt="C#">
-                    <img src="images/python.png" alt=".NET">
-                    <img src="images/python.png" alt="Python">
-                    <img src="images/python.png" alt="MSSQL">
-                    <img src="images/python.png" alt="Firestore">
+                    <img src="https://img.icons8.com/color/48/000000/c-sharp-logo.png" alt="C#" data-aos="fade-left">
+                    <img src="https://img.icons8.com/color/48/000000/python--v1.png" alt="Python" data-aos="fade-left">
+                    <img src="https://img.icons8.com/color/48/000000/microsoft-sql-server.png" alt="MSSQL" data-aos="fade-left">
+                    <img src="https://img.icons8.com/color/48/000000/firebase.png" alt="Firestore" data-aos="fade-left">
                 </div>
-            </div>
-        </div>
-    </section>
-    <section id="experience">
-        <h3>工作經歷</h3>
-        <div class="job-card">
-            <h4>和雲行動服務有限公司</h4>
-            <p><strong>後端開發工程師</strong><br>2021.6 - 2024.7</p>
-            <ul>
-                <li>使用 .NET 和 C# 開發自動化排程系統及 API。</li>
-                <li>負責 MSSQL 資料庫操作，編寫 Stored Procedure 以提升數據處理效率。</li>
-                <li>參與 LINE Bot 專案開發，使用 Python FastAPI 設計並實現聊天機器人功能。</li>
-                <li>內部後台前端開發，具備 HTML 和 JavaScript 的開發能力。</li>
+                <li data-aos="flip-right"><strong>前端技術：</strong>HTML、JavaScript、CSS</li>
+                <div class="icons">
+                    <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt="HTML" data-aos="fade-left">
+                    <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" alt="JavaScript" data-aos="fade-left">
+                    <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" data-aos="fade-left">
+                </div>
+                <li data-aos="flip-left"><strong>工具與其他技能：</strong>Git、Docker、Postman</li>
+                <div class="icons">
+                    <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" data-aos="fade-left">
+                    <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker" data-aos="fade-left">
+                    <img src="https://img.icons8.com/?size=100&id=EPbEfEa7o8CB&format=png&color=000000" alt="Postman" data-aos="fade-left">
+                </div>
             </ul>
-        </div>
-        <div class="job-card">
-            <h4>新光三越百貨股份有限公司</h4>
-            <p><strong>系統維運工程師</strong><br>2019.4 - 2021.3</p>
-            <ul>
-                <li>負責 POS 系統的日常維護和故障排除，確保交易系統穩定運行。</li>
-                <li>協助專櫃的 POS 設備安裝與設定，並提供現場技術支援。</li>
-                <li>監控網路設備與網路流量，確保內部網路的穩定性與安全性。</li>
-                <li>管理和維護公司內部的網路架構，排查網路故障並進行修復。</li>
+        </section>
+        <section id="experience">
+            <h3>工作經歷</h3>
+            <div class="job-card" data-aos="fade-left">
+                <div class="company-logo-container">
+                    <img src="images/irent_logo.png" alt="和雲行動服務股份有限公司" class="company-logo">
+                    <h4>和雲行動服務股份有限公司</h4>
+                </div>
+                <p><strong>後端開發工程師</strong><br>2021.6 - 2024.7</p>
+                <ul>
+                    <li>使用 .NET 和 C# 開發自動化排程系統及 API。</li>
+                    <li>負責 MSSQL 資料庫操作，編寫 Stored Procedure 以提升數據處理效率。</li>
+                    <li>參與 LINE Bot 專案開發，使用 Python FastAPI 設計並實現聊天機器人功能。</li>
+                    <li>內部後台前端開發，具備 HTML 和 JavaScript 的開發能力。</li>
+                </ul>
+            </div>
+            <div class="job-card" data-aos="fade-left">
+                <div class="company-logo-container">
+                    <img src="images/mitsukoshi_logo.png" alt="新光三越百貨股份有限公司" class="company-logo">
+                    <h4>新光三越百貨股份有限公司</h4>
+                </div>
+                <p><strong>系統維運工程師</strong><br>2019.4 - 2021.3</p>
+                <ul>
+                    <li>負責 POS 系統的日常維護和故障排除，確保交易系統穩定運行。</li>
+                    <li>協助專櫃的 POS 設備安裝與設定，並提供現場技術支援。</li>
+                    <li>監控網路設備與網路流量，確保內部網路的穩定性與安全性。</li>
+                    <li>管理和維護公司內部的網路架構，排查網路故障並進行修復。</li>
+                </ul>
+            </div>
+        </section>
+        <section id="projects">
+            <h3>專案經驗</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>自動化排程系統</h4>
+                        <p>在和雲行動服務有限公司期間，我負責開發了一個自動化排程系統。這個系統使用 .NET 和 C# 開發，能夠自動化處理多種任務，提升了公司的運營效率。</p>
+                        <ul>
+                            <li>設計並實現系統架構，確保系統的穩定性和可擴展性。</li>
+                            <li>開發 API 以供其他系統和應用程式使用。</li>
+                            <li>使用 MSSQL 資料庫進行數據存儲和管理，並編寫 stored procedure 以提升數據處理效率。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>LINE Bot 開發</h4>
+                        <p>我參與了公司的 LINE Bot 專案，使用 Python 和 FastAPI 開發了一個智能聊天機器人。這個機器人能夠自動回應用戶的問題，並提供多種互動功能。</p>
+                        <ul>
+                            <li>設計並實現聊天機器人的功能模塊，提升用戶互動體驗。</li>
+                            <li>整合第三方 API，提供更多實用功能。</li>
+                            <li>協助前端開發，確保聊天機器人的界面友好且易於使用。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="personalProjects">
+            <h3 id="beaver">個人專案</h3>
+            <div class="project-vertical">
+                <div class="project-item">
+                    <div class="project-details">
+                        <h4>報名小狸🏸 - 羽球LINE Bot</h4>
+                        <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/LineTion_clientFlow.png" class="d-block w-100" alt="流程圖1" onclick="openModal(this, '流程圖1', '這是流程圖1的描述。')">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/LineTion_poolFlow.png" class="d-block w-100" alt="流程圖2" onclick="openModal(this, '流程圖1', '這是流程圖1的描述。')">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/LineTion_richmenuFlow.png" class="d-block w-100" alt="流程圖3" onclick="openModal(this, '流程圖1', '這是流程圖1的描述。')">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>  
+                        <p>　　兩年前，我開始接觸羽球運動，發現每次報名時，大家都是透過 LINE 群組接龍的方式進行。然而，當報名人數眾多時，經常會出現遺漏或重複登記的情況，給球友和團主都帶來了不少麻煩。當時我正好也在研究 LINE Bot 的開發技術，於是決定結合自己的興趣和專業知識，開發出一個羽球報名機器人，希望能夠解決報名過程中的種種困難，提供一個更高效的解決方案。</p>
+                        <h4 class="project-highlight">需求背景</h4>
+                        <div class="indent">
+                            <h5>球友端痛點：</h5>
+                            <ul>
+                                <li><strong>容易遺漏訊息：</strong>群組訊息量大，報名資訊容易被其他聊天內容淹沒，導致球友錯過報名時間或資訊。</li>
+                                <li><strong>場次資訊難以查詢：</strong>當有多場次選擇時，球友很難快速找到適合自己的場次資訊，如場地、時間等，經常需要翻找群組歷史訊息。</li>
+                                <li><strong>臨時取消聯繫困難：</strong>當球友臨時有事需要取消報名時，經常找不到團主或無法及時通知，導致取消資訊未能及時更新，造成不必要的困擾。</li>
+                            </ul>
+                            <h5>團主端痛點：</h5>
+                            <ul>
+                                <li><strong>手動整理報名資訊耗時：</strong>每次需要手動整理報名的成員名單、確認人數，管理工作量大且容易出現錯誤。</li>
+                                <li><strong>報名與取消統計困難：</strong>當球友需要更改報名狀態或取消報名時，團主需手動更新名單，無法即時獲取最新的報名情況。</li>
+                                <li><strong>多場次管理困難：</strong>對於同時開設多場次的團主，手動管理每個場次的報名名單與細節會變得更加複雜且耗時，容易出現資訊混淆和疏漏。</li>
+                            </ul>
+                            <h5>專案發想：</h5>
+                            <ul>
+                                <li><strong>選擇 LINE Bot 的原因：</strong>
+                                    <ul>
+                                        <li>LINE 在全台灣擁有超過 2000 萬用戶，覆蓋率高。</li>
+                                        <li>LINE 具有基本的身份認證功能，註冊流程簡單方便。</li>
+                                        <li>團主可輕鬆開設羽球場次，球友也能快速報名，減少繁瑣手續。</li>
+                                    </ul>
+                                </li>
+                                <li><strong>技術應用：</strong>
+                                    <ul>
+                                        <li><strong>Google Firebase：</strong>用於儲存報名及場次資料，確保數據的安全性與即時性。</li>
+                                        <li><strong>LINE LIFF：</strong>實現更多自由化且彈性的前端介面，提供直觀、方便的操作體驗。</li>
+                                    </ul>
+                                </li>
+                                <li><strong>整體目標：</strong>
+                                    <ul>
+                                        <li>提升報名流程的便捷性與使用者體驗。</li>
+                                        <li>確保數據管理的高效性與可靠性。</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <h4 class="project-highlight">專案重點</h4>
+                        <div class="indent">
+                            <h5>使用技術：</h5>
+                            <ul>
+                                <li><strong>後端：</strong>Python FastAPI、Redis、Google Firebase</li>
+                                <li><strong>前端：</strong>HTML、JavaScript、CSS</li>
+                            </ul>
+                            <h5>主要功能：</h5>
+                            <ul>
+                                <li><strong>球友端：</strong>
+                                    <ol>
+                                        <li><strong>查看場次：</strong>瀏覽所有已開放的場次，了解場地、時間、人數等資訊。</li>
+                                        <li><strong>已報場次管理：</strong>查看自己已報名的場次，可查看目前名單亦可隨時取消報名，避免占用名額。</li>
+                                        <li><strong>快速聯繫團主：</strong>點擊『團主資訊』可直接跳轉到團主LINE。</li>
+                                        <li><strong>場次提醒：</strong>利用LINE Notify，如正取名單有球友取消，候補上了會有提醒通知。</li>
+                                    </ol>
+                                </li>
+                                <li><strong>團主端：</strong>
+                                    <ol>
+                                        <li><strong>快速開場次：</strong>設定場次名稱、時間、地點及人數限制，一鍵生成場次資訊。另外有提供『週期場』的設定，會自動生成每一週的場次。</li>
+                                        <li><strong>編輯場次設定：</strong>隨時調整場次的各項細部設定，確保場次資訊保持最新。</li>
+                                        <li><strong>球友名單管理：</strong>實時查看並管理各個場次的報名名單，方便確認出席者。</li>
+                                        <li><strong>黑名單管理：</strong>團主可以將不符合規範的球友加入黑名單，限制其報名參加未來場次的權限。</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                            <h5>預期效益：</h5>
+                            <ul>
+                                <li><strong>簡化報名流程：</strong>讓團主與球友都能告別以往繁瑣的群組接龍報名方式，透過自動化的報名系統，減少手動管理的時間和精力。</li>
+                                <li><strong>資訊透明化：</strong>提供即時更新的報名資訊，確保球友與團主之間的資訊對稱，避免過去因訊息不一致而造成的誤解或錯過報名。</li>
+                                <li><strong>提升效率：</strong>預計能減少團主手動整理報名資料的時間約 50%，同時讓球友能更快速地完成報名，減少重複確認的溝通成本。</li>
+                                <li><strong>增進使用者體驗：</strong>通過更直觀、易操作的報名介面，提升球友的參與感與滿意度，使得報名流程更加順暢。</li>
+                            </ul>
+                            <h5>未來規劃：</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                <hr class="project-separator">
+                <div class="project-item">
+                    <div class="project-details">
+                        <h4 id="linetion">LineTion</h4>
+                        <div id="carouselProject2" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/LineTion_clientFlow.png" class="d-block w-100" alt="流程圖1" onclick="openModal(this, '流程圖1', '這是流程圖1的描述。')">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/LineTion_poolFlow.png" class="d-block w-100" alt="流程圖2" onclick="openModal(this, '流程圖1', '這是流程圖1的描述。')">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/LineTion_richmenuFlow.png" class="d-block w-100" alt="流程圖3" onclick="openModal(this, '流程圖1', '這是流程圖1的描述。')">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>              
+                        <p>　　為了解決在職場中常見的問題諸如「不知道要找誰詢問」、「問錯人反而讓問題更複雜」等，我們發現這些情況會影響工作效率。因此，我們開發了 LineTion 平台，一個結合 LINE Bot 與 Notion 資料庫的互動平台，旨在提供員工一個能快速查詢和提交問題的解決方案。</p>
+                        <h4 class="project-highlight">需求背景</h4>
+                        <div class="indent">
+                            <h5>工作環境痛點：</h5>
+                            <ul>
+                                <li>員工常因不確定要詢問誰而浪費大量時間。</li>
+                                <li>問錯人導致解決問題的時間拉長。</li>
+                                <li>需要有效率地管理和分享內部知識，避免重複詢問。</li>
+                            </ul>
+                            <h5>專案發想：</h5>
+                            <ul>
+                                <li>將 LINE Bot 的即時互動性與 Notion 的資料管理能力結合，打造一個「問題」與「解答」的互動平台。</li>
+                                <li>利用 Notion 作為後端資料庫，讓知識庫可視化且易於維護。</li>
+                            </ul>
+                        </div>
+                        <h4 class="project-highlight">專案重點</h4>
+                        <div class="indent">
+                            <h5>使用技術：</h5>
+                            <div class="indent">
+                                <p>Python FastAPI、Notion API、LINE Messaging API。</p>
+                            </div>
+                            <h5>主要功能：</h5>
+                            <div class="indent">
+                                <ol>
+                                    <li><strong>Q&A 查詢功能：</strong>
+                                        <ul>
+                                            <li>使用者可透過 LINE Bot 查詢常見問題，Bot 會自動回覆相關解答。</li>
+                                            <li>使用 Notion 資料庫管理 Q&A 內容，實現靈活的資料更新。</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>案件提交與處理：</strong>
+                                        <ul>
+                                            <li>使用者可提交異常問題，系統自動分類並匯入 Notion。</li>
+                                            <li>案件狀態更新自動通知使用者，包括「處理中」和「已完成」狀態。</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>案件進度查詢：</strong>
+                                        <ul>
+                                            <li>支援根據案件編號或查詢全部案件，實時獲取處理狀態。</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>數據視覺化：</strong>
+                                        <ul>
+                                            <li>每日自動撈取 Notion 資料庫的數據，製作案件趨勢圖及分類統計圖，顯示在後台首頁。</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                            <h5>預期效益：</h5>
+                            <ul>
+                                <li>加速案件處理流程，預計能減少 40% 的處理時間。</li>
+                                <li>建立公司內部的知識庫，讓用戶能夠自行解決常見問題。</li>
+                                <li>利用數據分析提升組織效率，針對問題進行改進。</li>
+                            </ul>
+                        </div>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/QZQyRU95bh8" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="interest">
+            <h3>其他興趣</h3>
+            <div class="page">
+            <div class="container">
+         
+                <div class="photo-container">
+                  <div class="photo-cont-item animation-1">
+                    <div class="photo-item photo-1"></div>
+                    <div class="photo-item photo-2"></div>
+                    <div class="photo-item photo-3"></div>
+                    <div class="photo-item photo-4"></div>
+                    <div class="photo-item photo-5"></div>
+                    <div class="photo-item photo-6"></div>
+                    
+                    <div class="photo-item photo-1"></div>
+                    <div class="photo-item photo-2"></div>
+                    <div class="photo-item photo-3"></div>
+                    <div class="photo-item photo-4"></div>
+                    <div class="photo-item photo-5"></div>
+                    <div class="photo-item photo-6"></div>
+                  </div>
+           
+                  <div class="photo-cont-item animation-2">
+                    <div class="photo-item photo-7"></div>
+                    <div class="photo-item photo-8"></div>
+                    <div class="photo-item photo-9"></div>
+                    <div class="photo-item photo-10"></div>
+                    <div class="photo-item photo-11"></div>
+                    <div class="photo-item photo-12"></div>
+                    
+                    <div class="photo-item photo-7"></div>
+                    <div class="photo-item photo-8"></div>
+                    <div class="photo-item photo-9"></div>
+                    <div class="photo-item photo-10"></div>
+                    <div class="photo-item photo-11"></div>
+                    <div class="photo-item photo-12"></div>
+                  </div>
+           
+                </div><!-- .photo-container -->
+                
+              </div><!-- .container -->
+            </div>
+            <!-- <div id="paintingCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/oil_paintings/colorfulbird.jpeg" class="d-block w-100" alt="油畫作品1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/oil_paintings/dodolong.jpeg" class="d-block w-100" alt="油畫作品2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/oil_paintings/phoenix.jpeg" class="d-block w-100" alt="油畫作品3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#paintingCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#paintingCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div> -->
+            <h4>油畫創作</h4>
+            <p>　　工作之餘，我最喜歡拿起畫筆進行油畫創作。在這過程中，我享受讓時間慢下來，用畫筆捕捉生活中的細膩瞬間與情感流露。每一幅作品都是我與畫布之間的對話，透過色彩與筆觸，描繪出我眼中的世界。如果你也喜歡這樣的藝術表達，不妨點擊下方連結，欣賞更多我的油畫作品。</p>
+            <a href="my_oilpaintings.html">查看所有油畫作品</a>
+        </section>
+        <section id="contact">
+            <h3>聯絡方式</h3>
+            <p>你可以通過以下方式聯絡我：</p>
+            <ul class="contact-list">
+                <li>
+                    <strong>Email：</strong>
+                    <a href="mailto:alex840218@gmail.com">alex840218@gmail.com</a>
+                </li>
+                <li>
+                    <strong>LinkedIn：</strong>
+                    <a href="https://www.linkedin.com/in/teyukao" target="_blank">https://www.linkedin.com/in/teyukao</a>
+                </li>
+                <li>
+                    <strong>LINE：</strong>
+                    <a href="https://line.me/ti/p/~alex900521" target="_blank">你的 LINE ID</a>
+                </li>
             </ul>
-        </div>
-    </section>
-    <section id="projects">
-        <h3>專案經驗</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h4>自動化排程系統</h4>
-                    <p>在和雲行動服務有限公司期間，我負責開發了一個自動化排程系統。這個系統使用 .NET 和 C# 開發，能夠自動化處理多種任務，提升了公司的運營效率。</p>
-                    <ul>
-                        <li>設計並實現系統架構，確保系統的穩定性和可擴展性。</li>
-                        <li>開發 API 以供其他系統和應用程式使用。</li>
-                        <li>使用 MSSQL 資料庫進行數據存儲和管理，並編寫 stored procedure 以提升數據處理效率。</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h4>LINE Bot 開發</h4>
-                    <p>我參與了公司的 LINE Bot 專案，使用 Python 和 FastAPI 開發了一個智能聊天機器人。這個機器人能夠自動回應用戶的問題，並提供多種互動功能。</p>
-                    <ul>
-                        <li>設計並實現聊天機器人的功能模塊，提升用戶互動體驗。</li>
-                        <li>整合第三方 API，提供更多實用功能。</li>
-                        <li>協助前端開發，確保聊天機器人的界面友好且易於使用。</li>
-                    </ul>
-                </div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+        <script src="script.js"></script>
+        <!-- Modal for image enlargement -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-content-wrapper">
+                <img class="modal-content" id="modalImage">
+                <div id="caption"></div>
             </div>
         </div>
-    </section>
-    <section id="personalProjects">
-        <h3 id="beaver">個人專案</h3>
-        <div class="project-vertical">
-            <div class="project-item">
-                <div class="project-details">
-                    <h4>報名小狸🏸 - 羽球LINE Bot</h4>
-                    <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/LineTion_clientFlow.png" class="d-block w-100" alt="流程圖1" onclick="openModal(this, '流程圖1', '這是流程圖1的描述。')">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/LineTion_poolFlow.png" class="d-block w-100" alt="流程圖2" onclick="openModal(this, '流程圖1', '這是流程圖1的描述。')">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/LineTion_richmenuFlow.png" class="d-block w-100" alt="流程圖3" onclick="openModal(this, '流程圖1', '這是流程圖1的描述。')">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>  
-                    <p>　　兩年前，我開始接觸羽球運動，發現每次報名時，大家都是透過 LINE 群組接龍的方式進行。然而，當報名人數眾多時，經常會出現遺漏或重複登記的情況，給球友和團主都帶來了不少麻煩。當時我正好也在研究 LINE Bot 的開發技術，於是決定結合自己的興趣和專業知識，開發出一個羽球報名機器人，希望能夠解決報名過程中的種種困難，提供一個更高效的解決方案。</p>
-                    <h4 class="project-highlight">需求背景</h4>
-                    <div class="indent">
-                        <h5>球友端痛點：</h5>
-                        <ul>
-                            <li><strong>容易遺漏訊息：</strong>群組訊息量大，報名資訊容易被其他聊天內容淹沒，導致球友錯過報名時間或資訊。</li>
-                            <li><strong>場次資訊難以查詢：</strong>當有多場次選擇時，球友很難快速找到適合自己的場次資訊，如場地、時間等，經常需要翻找群組歷史訊息。</li>
-                            <li><strong>臨時取消聯繫困難：</strong>當球友臨時有事需要取消報名時，經常找不到團主或無法及時通知，導致取消資訊未能及時更新，造成不必要的困擾。</li>
-                        </ul>
-                        <h5>團主端痛點：</h5>
-                        <ul>
-                            <li><strong>手動整理報名資訊耗時：</strong>每次需要手動整理報名的成員名單、確認人數，管理工作量大且容易出現錯誤。</li>
-                            <li><strong>報名與取消統計困難：</strong>當球友需要更改報名狀態或取消報名時，團主需手動更新名單，無法即時獲取最新的報名情況。</li>
-                            <li><strong>多場次管理困難：</strong>對於同時開設多場次的團主，手動管理每個場次的報名名單與細節會變得更加複雜且耗時，容易出現資訊混淆和疏漏。</li>
-                        </ul>
-                        <h5>專案發想：</h5>
-                        <ul>
-                            <li><strong>選擇 LINE Bot 的原因：</strong>
-                                <ul>
-                                    <li>LINE 在全台灣擁有超過 2000 萬用戶，覆蓋率高。</li>
-                                    <li>LINE 具有基本的身份認證功能，註冊流程簡單方便。</li>
-                                    <li>團主可輕鬆開設羽球場次，球友也能快速報名，減少繁瑣手續。</li>
-                                </ul>
-                            </li>
-                            <li><strong>技術應用：</strong>
-                                <ul>
-                                    <li><strong>Google Firebase：</strong>用於儲存報名及場次資料，確保數據的安全性與即時性。</li>
-                                    <li><strong>LINE LIFF：</strong>實現更多自由化且彈性的前端介面，提供直觀、方便的操作體驗。</li>
-                                </ul>
-                            </li>
-                            <li><strong>整體目標：</strong>
-                                <ul>
-                                    <li>提升報名流程的便捷性與使用者體驗。</li>
-                                    <li>確保數據管理的高效性與可靠性。</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4 class="project-highlight">專案重點</h4>
-                    <div class="indent">
-                        <h5>使用技術：</h5>
-                        <ul>
-                            <li><strong>後端：</strong>Python FastAPI、Redis、Google Firebase</li>
-                            <li><strong>前端：</strong>HTML、JavaScript、CSS</li>
-                        </ul>
-                        <h5>主要功能：</h5>
-                        <ul>
-                            <li><strong>球友端：</strong>
-                                <ol>
-                                    <li><strong>查看場次：</strong>瀏覽所有已開放的場次，了解場地、時間、人數等資訊。</li>
-                                    <li><strong>已報場次管理：</strong>查看自己已報名的場次，可查看目前名單亦可隨時取消報名，避免占用名額。</li>
-                                    <li><strong>快速聯繫團主：</strong>點擊『團主資訊』可直接跳轉到團主LINE。</li>
-                                    <li><strong>場次提醒：</strong>利用LINE Notify，如正取名單有球友取消，候補上了會有提醒通知。</li>
-                                </ol>
-                            </li>
-                            <li><strong>團主端：</strong>
-                                <ol>
-                                    <li><strong>快速開場次：</strong>設定場次名稱、時間、地點及人數限制，一鍵生成場次資訊。另外有提供『週期場』的設定，會自動生成每一週的場次。</li>
-                                    <li><strong>編輯場次設定：</strong>隨時調整場次的各項細部設定，確保場次資訊保持最新。</li>
-                                    <li><strong>球友名單管理：</strong>實時查看並管理各個場次的報名名單，方便確認出席者。</li>
-                                    <li><strong>黑名單管理：</strong>團主可以將不符合規範的球友加入黑名單，限制其報名參加未來場次的權限。</li>
-                                </ol>
-                            </li>
-                        </ul>
-                        <h5>預期效益：</h5>
-                        <ul>
-                            <li><strong>簡化報名流程：</strong>讓團主與球友都能告別以往繁瑣的群組接龍報名方式，透過自動化的報名系統，減少手動管理的時間和精力。</li>
-                            <li><strong>資訊透明化：</strong>提供即時更新的報名資訊，確保球友與團主之間的資訊對稱，避免過去因訊息不一致而造成的誤解或錯過報名。</li>
-                            <li><strong>提升效率：</strong>預計能減少團主手動整理報名資料的時間約 50%，同時讓球友能更快速地完成報名，減少重複確認的溝通成本。</li>
-                            <li><strong>增進使用者體驗：</strong>通過更直觀、易操作的報名介面，提升球友的參與感與滿意度，使得報名流程更加順暢。</li>
-                        </ul>
-                        <h5>未來規劃：</h5>
-                        
-                    </div>
-                </div>
-            </div>
-            <hr class="project-separator">
-            <div class="project-item">
-                <div class="project-details">
-                    <h4 id="linetion">LineTion</h4>
-                    <div id="carouselProject2" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/LineTion_clientFlow.png" class="d-block w-100" alt="流程圖1" onclick="openModal(this, '流程圖1', '這是流程圖1的描述。')">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/LineTion_poolFlow.png" class="d-block w-100" alt="流程圖2" onclick="openModal(this, '流程圖1', '這是流程圖1的描述。')">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/LineTion_richmenuFlow.png" class="d-block w-100" alt="流程圖3" onclick="openModal(this, '流程圖1', '這是流程圖1的描述。')">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>              
-                    <p>　　為了解決在職場中常見的問題諸如「不知道要找誰詢問」、「問錯人反而讓問題更複雜」等，我們發現這些情況會影響工作效率。因此，我們開發了 LineTion 平台，一個結合 LINE Bot 與 Notion 資料庫的互動平台，旨在提供員工一個能快速查詢和提交問題的解決方案。</p>
-                    <h4 class="project-highlight">需求背景</h4>
-                    <div class="indent">
-                        <h5>工作環境痛點：</h5>
-                        <ul>
-                            <li>員工常因不確定要詢問誰而浪費大量時間。</li>
-                            <li>問錯人導致解決問題的時間拉長。</li>
-                            <li>需要有效率地管理和分享內部知識，避免重複詢問。</li>
-                        </ul>
-                        <h5>專案發想：</h5>
-                        <ul>
-                            <li>將 LINE Bot 的即時互動性與 Notion 的資料管理能力結合，打造一個「問題」與「解答」的互動平台。</li>
-                            <li>利用 Notion 作為後端資料庫，讓知識庫可視化且易於維護。</li>
-                        </ul>
-                    </div>
-                    <h4 class="project-highlight">專案重點</h4>
-                    <div class="indent">
-                        <h5>使用技術：</h5>
-                        <div class="indent">
-                            <p>Python FastAPI、Notion API、LINE Messaging API。</p>
-                        </div>
-                        <h5>主要功能：</h5>
-                        <div class="indent">
-                            <ol>
-                                <li><strong>Q&A 查詢功能：</strong>
-                                    <ul>
-                                        <li>使用者可透過 LINE Bot 查詢常見問題，Bot 會自動回覆相關解答。</li>
-                                        <li>使用 Notion 資料庫管理 Q&A 內容，實現靈活的資料更新。</li>
-                                    </ul>
-                                </li>
-                                <li><strong>案件提交與處理：</strong>
-                                    <ul>
-                                        <li>使用者可提交異常問題，系統自動分類並匯入 Notion。</li>
-                                        <li>案件狀態更新自動通知使用者，包括「處理中」和「已完成」狀態。</li>
-                                    </ul>
-                                </li>
-                                <li><strong>案件進度查詢：</strong>
-                                    <ul>
-                                        <li>支援根據案件編號或查詢全部案件，實時獲取處理狀態。</li>
-                                    </ul>
-                                </li>
-                                <li><strong>數據視覺化：</strong>
-                                    <ul>
-                                        <li>每日自動撈取 Notion 資料庫的數據，製作案件趨勢圖及分類統計圖，顯示在後台首頁。</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-                        <h5>預期效益：</h5>
-                        <ul>
-                            <li>加速案件處理流程，預計能減少 40% 的處理時間。</li>
-                            <li>建立公司內部的知識庫，讓用戶能夠自行解決常見問題。</li>
-                            <li>利用數據分析提升組織效率，針對問題進行改進。</li>
-                        </ul>
-                    </div>
-                    <div class="video-container">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QZQyRU95bh8" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="interest">
-        <h3>其他興趣</h3>
-        <div class="page">
-        <div class="container">
-     
-            <div class="photo-container">
-              <div class="photo-cont-item animation-1">
-                <div class="photo-item photo-1"></div>
-                <div class="photo-item photo-2"></div>
-                <div class="photo-item photo-3"></div>
-                <div class="photo-item photo-4"></div>
-                <div class="photo-item photo-5"></div>
-                <div class="photo-item photo-6"></div>
-                
-                <div class="photo-item photo-1"></div>
-                <div class="photo-item photo-2"></div>
-                <div class="photo-item photo-3"></div>
-                <div class="photo-item photo-4"></div>
-                <div class="photo-item photo-5"></div>
-                <div class="photo-item photo-6"></div>
-              </div>
-       
-              <div class="photo-cont-item animation-2">
-                <div class="photo-item photo-7"></div>
-                <div class="photo-item photo-8"></div>
-                <div class="photo-item photo-9"></div>
-                <div class="photo-item photo-10"></div>
-                <div class="photo-item photo-11"></div>
-                <div class="photo-item photo-12"></div>
-                
-                <div class="photo-item photo-7"></div>
-                <div class="photo-item photo-8"></div>
-                <div class="photo-item photo-9"></div>
-                <div class="photo-item photo-10"></div>
-                <div class="photo-item photo-11"></div>
-                <div class="photo-item photo-12"></div>
-              </div>
-       
-            </div><!-- .photo-container -->
-            
-          </div><!-- .container -->
-        </div>
-        <!-- <div id="paintingCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/oil_paintings/colorfulbird.jpeg" class="d-block w-100" alt="油畫作品1">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/oil_paintings/dodolong.jpeg" class="d-block w-100" alt="油畫作品2">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/oil_paintings/phoenix.jpeg" class="d-block w-100" alt="油畫作品3">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#paintingCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#paintingCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div> -->
-        <h4>油畫創作</h4>
-        <p>　　工作之餘，我最喜歡拿起畫筆進行油畫創作。在這過程中，我享受讓時間慢下來，用畫筆捕捉生活中的細膩瞬間與情感流露。每一幅作品都是我與畫布之間的對話，透過色彩與筆觸，描繪出我眼中的世界。如果你也喜歡這樣的藝術表達，不妨點擊下方連結，欣賞更多我的油畫作品。</p>
-        <a href="my_oilpaintings.html">查看所有油畫作品</a>
-    </section>
-    <section id="contact">
-        <h3>聯絡方式</h3>
-        <p>你可以通過以下方式聯絡我：</p>
-        <ul class="contact-list">
-            <li>
-                <strong>Email：</strong>
-                <a href="mailto:alex840218@gmail.com">alex840218@gmail.com</a>
-            </li>
-            <li>
-                <strong>LinkedIn：</strong>
-                <a href="https://www.linkedin.com/in/teyukao" target="_blank">https://www.linkedin.com/in/teyukao</a>
-            </li>
-            <li>
-                <strong>LINE：</strong>
-                <a href="https://line.me/ti/p/~alex900521" target="_blank">你的 LINE ID</a>
-            </li>
-        </ul>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
-    <script src="script.js"></script>
-    <!-- Modal for image enlargement -->
-    <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div class="modal-content-wrapper">
-            <img class="modal-content" id="modalImage">
-            <div id="caption"></div>
-        </div>
-    </div>    
+    </div>
 </body>
 <footer>
     <p class="footer-text">&copy; 2024 Alex Kao | <a href="#">Back to Top</a></p>

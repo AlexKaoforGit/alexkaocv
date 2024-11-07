@@ -14,6 +14,12 @@ html {
     height: 100vh;
 }
 
+/* 設定主容器寬度 */
+.main-container {
+    width: 100vw;
+    overflow-x: hidden; /* 確保不會出現水平滾動 */
+}
+
 body {
     height: 5000px; /* 設置足夠的高度來滾動 */
     background: #000;
@@ -544,64 +550,31 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* 基本樣式 */
-.circle-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.circle {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 2px dashed #ddd;
-}
-
-.circle h4 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2em;
-    color: #0073e6;
-    z-index: 1;
-}
-
-/* .icons 整體旋轉動畫 */
 .icons {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    /* animation: rotate 10s linear infinite; */
-    transform-origin: 50% 50%; /* 設定旋轉基準點在圓心 */
+    display: flex;
+    justify-content: flex-start; /* 讓圖標從右側開始 */
+    overflow: hidden; /* 隱藏溢出的內容 */
+    margin-bottom: 20px;
 }
 
-/* 圖標樣式，使用 translate 確保每個圖標距離圓心的距離 */
 .icons img {
+    opacity: 0;
+    transform: translateX(100%);
     width: 30px;
     height: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform-origin: center;
+    margin-right: 15px;
 }
 
-/* 等距排列每個圖標，並用 translateY(-90px) 來微調 */
-.icons img:nth-child(1) { transform: rotate(0deg) translateY(-100px); }
-.icons img:nth-child(2) { transform: rotate(72deg) translateY(-100px); }
-.icons img:nth-child(3) { transform: rotate(144deg) translateY(-100px); }
-.icons img:nth-child(4) { transform: rotate(216deg) translateY(-100px); }
-.icons img:nth-child(5) { transform: rotate(288deg) translateY(-100px); }
+.company-logo-container {
+    display: flex;
+    align-items: center;
+}
 
-/* 定義旋轉動畫 */
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+.company-logo {
+    width: 60px; /* 調整寬度 */
+    height: auto; /* 自動適應高度 */
+    margin-right: 5px; /* 和文字間距 */
+    margin-bottom: 8px; /* 將圖片稍微向上移 */
 }
 
 .page {
@@ -724,6 +697,18 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* 在手機版中將 logo 放置在 h4 上方 */
+    .job-card .company-logo-container {
+        flex-direction: column; /* 垂直顯示 */
+        align-items: flex-start; /* 向左對齊 */
+        margin-bottom: 10px; /* 增加間距 */
+    }
+
+    .company-logo {
+        margin-right: 0; /* 取消水平間距 */
+        margin-bottom: 8px; /* 垂直間距 */
+    }
+
     .nav-container {
         flex-direction: row;
         justify-content: space-between;

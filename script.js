@@ -51,6 +51,17 @@ function toggleMenu() {
     nav.classList.toggle('active');
 }
 
+// Close menu when clicking outside of it
+document.addEventListener('click', function(event) {
+    const nav = document.querySelector('nav ul');
+    const hamburger = document.querySelector('.hamburger');
+    
+    // Check if the click is outside the nav or the hamburger button
+    if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+        nav.classList.remove('active'); // Close the menu
+    }
+});
+
 console.clear();
 
 const canvas = document.getElementById("hero-lightpass");
