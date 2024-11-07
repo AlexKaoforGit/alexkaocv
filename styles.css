@@ -8,27 +8,28 @@ body {
     line-height: 2; /* 調整行距 */
     overflow-x: hidden; /* 隱藏水平滾動條 */
 }
-        /* 設置全局 HTML 和 body */
-        html {
-            height: 100vh;
-        }
 
-        body {
-            height: 5000px; /* 設置足夠的高度來滾動 */
-            background: #000;
-            margin: 0;
-        }
+/* 設置全局 HTML 和 body */
+html {
+    height: 100vh;
+}
 
-        /* 設置 Canvas */
-        canvas {
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 100vw;
-            max-height: 100vh;
-            z-index: -1; /* 設置畫布在最底層 */
-        }
+body {
+    height: 5000px; /* 設置足夠的高度來滾動 */
+    background: #000;
+    margin: 0;
+}
+
+/* 設置 Canvas */
+canvas {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100vw;
+    max-height: 100vh;
+    z-index: -1; /* 設置畫布在最底層 */
+}
 
 nav {
     background-color: #333;
@@ -657,6 +658,12 @@ footer a:hover {
   width: calc(380px * 12);
 }
 
+.animation-1,
+.animation-2 {
+    width: 100vw; /* 限制寬度 */
+    overflow-x: hidden;
+}
+
 @keyframes scroller {
   0% {
     transform: translateX(0);
@@ -723,6 +730,10 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden; /* 阻止移動端的橫向滾動 */
+    }
+
     .nav-container {
         flex-direction: row;
         justify-content: space-between;
