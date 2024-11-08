@@ -618,7 +618,7 @@ footer a:hover {
     margin-right: 60px;
     margin-bottom: 60px;
     border-radius: 16px;
-    background-size: center;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
@@ -626,26 +626,26 @@ footer a:hover {
 }
 
 .animation-1 {
-  animation: scroller 40s linear infinite;
+  animation: scroller 120s linear infinite;
   display: flex;
   width: fit-content;
 }
 
 .animation-2 {
   margin-left: 150px;
-  animation: scroller 30s linear infinite;
+  animation: scroller 100s linear infinite;
   display: flex;
   width: fit-content;
 }
 
 @keyframes scroller {
-  0% {
-    transform: translateX(0);
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
-  100% {
-    transform: translateX( calc(-380px * 6) );
-  }
-}
 
 #pdf-container {
     width: 794px;
