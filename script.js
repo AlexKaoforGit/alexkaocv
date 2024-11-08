@@ -12,6 +12,26 @@ document.addEventListener("DOMContentLoaded", function() {
             closeModal();
         }
     });
+
+    const container1 = document.querySelector('.photo-cont-item.animation-1');
+    const container2 = document.querySelector('.photo-cont-item.animation-2');
+    
+    // 前 35 張圖片放入 container1
+    for (let i = 1; i <= 35; i++) {
+      const photoItem = document.createElement('div');
+      photoItem.classList.add('photo-item', `photo-${i}`);
+      photoItem.style.backgroundImage = `url(images/photo_container/resized_image_${i}.png)`;
+      container1.appendChild(photoItem);
+    }
+    
+    // 後 36 張圖片放入 container2
+    for (let i = 36; i <= 71; i++) {
+      const photoItem = document.createElement('div');
+      photoItem.classList.add('photo-item', `photo-${i}`);
+      photoItem.style.backgroundImage = `url(images/photo_container/resized_image_${i}.png)`;
+      container2.appendChild(photoItem);
+    }
+    
 });
 
 // Smooth scrolling for navigation links
@@ -61,8 +81,6 @@ document.addEventListener('click', function(event) {
         nav.classList.remove('active'); // Close the menu
     }
 });
-
-console.clear();
 
 const canvas = document.getElementById("hero-lightpass");
 const context = canvas.getContext("2d");

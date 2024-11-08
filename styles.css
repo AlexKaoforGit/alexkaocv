@@ -130,7 +130,7 @@ header .profile-pic {
 section {
     padding: 2rem;
     margin: 1rem auto;
-    background-color: white;
+    background-color: #EDEDED;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 80%; /* 調整寬度 */
@@ -406,6 +406,10 @@ ol > li::before {
     margin: 0 auto;
 }
 
+.subject-title {
+    font-weight: 800;
+}
+
 .header-title {
     font-size: 2em;
     margin: 0;
@@ -535,19 +539,30 @@ footer a:hover {
 .contact-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .contact-list li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .contact-list a {
     color: #007bff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 .contact-list a:hover {
     text-decoration: underline;
+}
+
+.contact-icon {
+    width: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .icons {
@@ -577,19 +592,15 @@ footer a:hover {
     margin-bottom: 8px; /* 將圖片稍微向上移 */
 }
 
-.page {
-  margin: 20px auto;
-  display: flex;
-  max-width: 1140px;
-  background-color: #fff;
-}
-
 .container {
   width: 100%;
   height: 100%;
-  background: #f3f4f5;
+  background: #fff;
   border-radius: 30px;
   overflow: hidden;
+  box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .photo-container {
@@ -607,7 +618,7 @@ footer a:hover {
     margin-right: 60px;
     margin-bottom: 60px;
     border-radius: 16px;
-    background-size: cover;
+    background-size: center;
     background-repeat: no-repeat;
     background-position: center;
     box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
@@ -617,18 +628,14 @@ footer a:hover {
 .animation-1 {
   animation: scroller 40s linear infinite;
   display: flex;
-  width: calc(380px * 12);
+  width: fit-content;
 }
+
 .animation-2 {
   margin-left: 150px;
   animation: scroller 30s linear infinite;
   display: flex;
-  width: calc(380px * 12);
-}
-.animation-3 {
-  animation: scroller 50s linear infinite;
-  display: flex;
-  width: calc(380px * 12);
+  width: fit-content;
 }
 
 @keyframes scroller {
@@ -640,59 +647,11 @@ footer a:hover {
   }
 }
 
-.photo-1 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513400/Nature/image_18_lwam5y.jpg);
-}
-.photo-2 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513347/Nature/image_16_oqcpeb.jpg);
-}
-.photo-3 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513347/Nature/image_15_opmlwd.jpg);
-}
-.photo-4 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513346/Nature/image_14_nie14a.jpg);
-}
-.photo-5 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513346/Nature/image_13_kojf0w.jpg);
-}
-.photo-6 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513346/Nature/image_17_hngpby.jpg);
-}
-.photo-7 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513346/Nature/image_11_wcunjf.jpg);
-}
-.photo-8 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513346/Nature/image_9_stnpjs.jpg);
-}
-.photo-9 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_12_m3evi3.jpg);
-}
-.photo-10 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_10_euaoai.jpg);
-}
-.photo-11 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_7_apdkz1.jpg);
-}
-.photo-12 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_8_khwrpi.jpg);
-}
-.photo-13 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_5_vhwqqg.jpg);
-}
-.photo-14 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_2_nrbfpf.jpg);
-}
-.photo-15 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_4_qxw6i4.jpg);
-}
-.photo-16 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_3_ucohbw.jpg);
-}
-.photo-17 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_1_yitfy3.jpg);
-}
-.photo-18 {
-  background-image: url(https://res.cloudinary.com/dzq1l03yt/image/upload/v1593513345/Nature/image_6_xcylqe.jpg);
+#pdf-container {
+    width: 794px;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow: hidden;
 }
 
 /* Responsive Design */
